@@ -71,7 +71,7 @@ module.exports = ({ buildConfig = {}, themeConfig = {}, entry }) => {
   // 增加 html 输出，支持多页面应用
   Array.prototype.push.apply(plugins, getEntryHtmlPlugins(entry));
 
-  if (paths.publicUrl === './') {
+  if (buildConfig.localization || buildConfig.publicURL === './') {
     console.log(
       colors.green('Info:'),
       '离线化构建项目，自动下载网络资源，请耐心等待'

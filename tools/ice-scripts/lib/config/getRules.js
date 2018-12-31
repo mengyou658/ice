@@ -62,9 +62,9 @@ module.exports = (buildConfig = {}, themeConfig) => {
   // refs: https://github.com/webpack-contrib/mini-css-extract-plugin
   const miniCssExtractPluginLoader = { loader: MiniCssExtractPlugin.loader };
 
-  if (paths.publicUrl === './') {
-    miniCssExtractPluginLoader.options = { publicPath: '../' };
-  }
+  // if (paths.publicUrl === './') {
+  //   miniCssExtractPluginLoader.options = { publicPath: '../' };
+  // }
 
   return [
     {

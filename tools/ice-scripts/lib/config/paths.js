@@ -14,9 +14,9 @@ const getPublicUrl = (appPackageJson) => {
   if (buildConfig && (buildConfig.publicURL || buildConfig.publicUrl)) {
     return buildConfig.publicURL || buildConfig.publicUrl;
   }
-  if (buildConfig.localization) {
-    return './';
-  }
+  // if (buildConfig.localization) {
+  //   return './';
+  // }
   // 默认值为相对于当前域名绝对路径
   return '/';
 };
@@ -65,7 +65,7 @@ module.exports = {
   appSrc: resolveApp('src'),
   appNodeModules: resolveApp('node_modules'),
   sdkNodeModules: resolveSDK('../../node_modules'),
-  publicUrl: getPublicUrl(resolveApp('package.json')),
+  // publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
   resolveApp,
   appDirectory,
