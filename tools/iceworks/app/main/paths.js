@@ -19,26 +19,10 @@ const NODE_PATH = isDev
 
 const NPM_CLI = path.join(APP_PATH, 'node_modules', 'npm', 'bin', 'npm-cli.js');
 
-let SASS_BINARY_PATH = isDev
-  ? path.join(
-      process.cwd(),
-      'binary',
-      process.platform,
-      'sass',
-      `${process.platform}-x64-57_binding.node`
-    )
-  : path.join(
-      process.resourcesPath,
-      'binary',
-      'sass',
-      `${process.platform}-x64-57_binding.node`
-    );
-
 module.exports = {
   APP_BIN_PATH,
   APP_PATH,
   NPM_CLI,
-  SASS_BINARY_PATH,
   NODE_PATH,
   WIN_NPM_CMD,
 };

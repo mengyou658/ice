@@ -6,9 +6,8 @@ const settings = require('./services/settings');
 const is = require('electron-is');
 const isWin = is.windows();
 
-const { APP_BIN_PATH, SASS_BINARY_PATH } = require('./paths');
+const { APP_BIN_PATH } = require('./paths');
 
-exports.SASS_BINARY_PATH = SASS_BINARY_PATH;
 
 exports.getEnv = () => {
   const npmEnv = npmRunPath.env();
@@ -17,7 +16,6 @@ exports.getEnv = () => {
     npm_config_registry: settings.get('registry'),
     // eslint-disable-next-line
     yarn_registry: settings.get('registry'),
-    SASS_BINARY_PATH,
     CLICOLOR: 1,
     FORCE_COLOR: 1,
     COLORTERM: 'truecolor',

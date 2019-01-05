@@ -17,6 +17,7 @@ let spawn;
 try {
   spawn = require('node-pty').spawn;
 } catch (err) {
+  console.error(err)
   throw createNodePtyError();
 }
 

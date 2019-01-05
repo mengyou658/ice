@@ -20,6 +20,8 @@ nvm use 8 // 安装 >= 8.10.0 && < 9 的版本
 yarn install
 yarn dev
 yarn start
+# 如果报node-pty则执行
+yarn rebuild-node-pty
 ```
 
 # pack
